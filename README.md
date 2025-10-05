@@ -35,7 +35,7 @@ ModernShelf is a comprehensive full-stack web application built from the ground 
 ## 📂 Folder Structure
 
 The project is organized into a monorepo structure with two main folders:
-'''
+```
 /
 ├── backend/
 │   ├── config/
@@ -54,7 +54,7 @@ The project is organized into a monorepo structure with two main folders:
 │   │   ├── services/
 │   │   └── App.jsx
 └── README.md  
-'''
+```
 
 ---
 
