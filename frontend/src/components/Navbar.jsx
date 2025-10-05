@@ -10,8 +10,8 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-md dark:bg-gray-800 dark:border-b dark:border-gray-700">
-      
       <div className="container mx-auto px-4 py-3 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+        
         <div className="flex flex-col sm:flex-row sm:items-center gap-4 w-full sm:w-auto justify-between">
           <Link to="/" className="text-xl font-bold text-gray-800 dark:text-white">
             ModernShelf
@@ -23,17 +23,24 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Secondary Nav */}
         <div className="flex items-center space-x-4">
           <ThemeToggle />
           {user ? (
             <>
               <Link to="/profile" className={inactiveLinkClass}>
-              <span className="items-center text-gray-800 hidden md:flex dark:text-gray-200"><FaUserCircle className="mr-2" />Hello, {user.name}</span></Link>
-              <button onClick={logout} className="bg-gray-700 text-white font-bold py-2 px-4 rounded-lg hover:bg-gray-800 transition-colors">Logout</button>
+                <FaUserCircle className="h-6 w-6" />
+              </Link>
+              <span className="text-gray-800 hidden md:inline dark:text-gray-200">
+                Hello, {user.name}
+              </span>
+              <button onClick={logout} className="bg-gray-700 text-white font-bold py-2 px-4 rounded-lg hover:bg-gray-800 transition-colors">
+                Logout
+              </button>
             </>
           ) : (
-            <Link to="/login" className="bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">Login</Link>
+            <Link to="/login" className="bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
+              Login
+            </Link>
           )}
         </div>
       </div>
