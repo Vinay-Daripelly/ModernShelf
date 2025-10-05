@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 const API_URL = `${API_BASE_URL}/api/books`;
 
 const getAuthHeaders = () => {
@@ -11,11 +11,6 @@ const getAuthHeaders = () => {
   return {};
 };
 
-
-// const getBooks = async (pageNumber = 1) => {
-//   const response = await axios.get(`${API_URL}?pageNumber=${pageNumber}`);
-//   return response.data; 
-// };
 const getBooks = async (pageNumber = 1, search = '', genre = '') => {
   const response = await axios.get(`${API_URL}`, {
     params: { pageNumber, search, genre }

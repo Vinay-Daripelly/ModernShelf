@@ -28,8 +28,8 @@ const Navbar = () => {
           <ThemeToggle />
           {user ? (
             <>
-              <Link to="/profile" className={inactiveLinkClass}>Profile</Link>
-              <span className="items-center text-gray-800 hidden md:flex dark:text-gray-200"><FaUserCircle className="mr-2" />Hello, {user.name}</span>
+              <Link to="/profile" className={inactiveLinkClass}>
+              <span className="items-center text-gray-800 hidden md:flex dark:text-gray-200"><FaUserCircle className="mr-2" />Hello, {user.name}</span></Link>
               <button onClick={logout} className="bg-gray-700 text-white font-bold py-2 px-4 rounded-lg hover:bg-gray-800 transition-colors">Logout</button>
             </>
           ) : (
